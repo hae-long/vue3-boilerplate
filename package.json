@@ -1,0 +1,33 @@
+{
+  "name": "boilerplate-vue3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "serve": "vite preview --host 0.0.0.0 --port 5501 --strictPort",
+    "staging": "vite build --mode staging",
+    "build": "vite build --mode production",
+    "watch": "vite build --mode staging --watch"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.1.5",
+    "axios": "^1.5.0",
+    "pinia": "^2.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "latest",
+    "path": "^0.12.7",
+    "prettier": "^3.2.5",
+    "sass": "1.75.0",
+    "sass-loader": "^14.2.1",
+    "lodash": "^4.17.21",
+    "lodash.clonedeep": "^4.5.0"
+  }
+}

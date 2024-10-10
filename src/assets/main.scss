@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+//테마 색상은 layout.js에 선언할것
+
+//공통 내용
+:root{
+
+}
+
+
+
+@mixin displayFlex($justify, $align){
+  display: flex;
+
+  @if($justify){
+    justify-content: $justify;
+  }
+
+  @if($align){
+    align-items: $align;
+  }
+}
+
+@mixin textEllipsis(){
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+@mixin themeOverflow(){
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include themeScrollbar();
+}
+
+@mixin themeScrollbar(){
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  //스크롤바의 색상
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--boiler-color-primary);
+  }
+
+  //스크롤바 뒷 배경 색상
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+
+
+@for $i from 0 through 100 {
+  .w#{$i}p {
+    width: #{$i} + '%' !important;
+  }
+  .h#{$i}p {
+    height: #{$i} + '%' !important;
+  }
+
+  .ma#{$i} {
+    margin: #{$i}px !important;
+  }
+  .mt#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$i}px !important;
+  }
+
+  .pa#{$i} {
+    padding: #{$i}px !important;
+  }
+  .pt#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$i}px !important;
+  }
+
+  .ma#{$i}p {
+    margin: #{$i} + '%' !important;
+  }
+  .mt#{$i}p {
+    margin-top: #{$i} + '%' !important;
+  }
+  .mr#{$i}p {
+    margin-right: #{$i} + '%' !important;
+  }
+  .mb#{$i}p {
+    margin-bottom: #{$i} + '%' !important;
+  }
+  .ml#{$i}p{
+    margin-left: #{$i} + '%' !important;
+  }
+
+  .pa#{$i}p {
+    padding: #{$i} + '%' !important;
+  }
+  .pt#{$i}p {
+    padding-top: #{$i} + '%' !important;
+  }
+  .pr#{$i}p {
+    padding-right: #{$i} + '%' !important;
+  }
+  .pb#{$i}p {
+    padding-bottom: #{$i} + '%' !important;
+  }
+  .pl#{$i}p {
+    padding-left: #{$i} + '%' !important;
+  }
+}
+
+@for $i from 0 through 20 {
+  .ba#{$i} {
+    border: #{$i}px solid var(--editor-border-color);
+  }
+  .bt#{$i} {
+    border-top: #{$i}px solid var(--editor-border-color);
+  }
+  .br#{$i} {
+    border-right: #{$i}px solid var(--editor-border-color);
+  }
+  .bb#{$i} {
+    border-bottom: #{$i}px solid var(--editor-border-color);
+  }
+  .bl#{$i} {
+    border-left: #{$i}px solid var(--editor-border-color);
+  }
+}
+
+@for $i from 0 through 20 {
+  .t#{$i} {
+    top: #{$i}px !important;
+  }
+  .r#{$i} {
+    right: #{$i}px !important;
+  }
+  .b#{$i} {
+    bottom: #{$i}px !important;
+  }
+  .l#{$i} {
+    left: #{$i}px !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .f#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+@for $i from 0 through 360 {
+  .rotate#{$i} {
+    transform: rotate(#{$i}deg);
+  }
+}
